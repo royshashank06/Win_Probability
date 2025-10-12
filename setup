@@ -1,0 +1,17 @@
+project_folder/
+│
+├── app.py
+├── pipe.pkl
+└── logo/
+    ├── ipl_logo.png
+    ├── mumbai_indians.png
+    ├── chennai_super_kings.png
+    ├── kolkata_knight_riders.png
+    ├── rajasthan_royals.png
+    ├── royal_challengers_bengaluru.png
+    ├── punjab_kings.png
+    ├── delhi_capitals.png
+    ├── sunrisers_hyderabad.png
+    ├── gujarat_titans.png
+    ├── lucknow_super_giants.png
+    └── default.png
