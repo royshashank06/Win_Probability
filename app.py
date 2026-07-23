@@ -111,31 +111,21 @@ st.markdown("<hr style='border:2px solid #FFD700;width:80%;margin:auto;'>", unsa
 # ----------------------------
 # 6️⃣ INPUT SECTION
 # ----------------------------
-st.markdown("<div class='card'>", unsafe_allow_html=True)
+#st.markdown("<div class='card'>", unsafe_allow_html=True)
+st.markdown(f"""
+<div class='card' style='text-align:center; font-size:22px; font-weight:700;'>
+    <span style='color:{TEAM_COLORS[batting_team]}'>{batting_team}</span>
+    <span style='color:#FFD700; margin:0 15px;'>VS</span>
+    <span style='color:{TEAM_COLORS[bowling_team]}'>{bowling_team}</span>
+</div>
+""", unsafe_allow_html=True)
+
 col1, col2 = st.columns(2)
 with col1:
     batting_team = st.selectbox("Select Batting Team", sorted(teams))
 with col2:
     bowling_team = st.selectbox("Select Bowling Team", sorted(teams))
 
-# ---------- NEW CODE: VS Bar ----------
-st.markdown(f"""
-<div style='
-    background: rgba(255,255,255,0.1);
-    border-radius: 50px;
-    padding: 12px 20px;
-    margin: 10px 0 20px 0;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 700;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-'>
-    <span style='color:{TEAM_COLORS[batting_team]}; text-shadow: 1px 1px 3px #000;'>{batting_team}</span>
-    <span style='color:#FFD700; margin: 0 15px;'>VS</span>
-    <span style='color:{TEAM_COLORS[bowling_team]}; text-shadow: 1px 1px 3px #000;'>{bowling_team}</span>
-</div>
-""", unsafe_allow_html=True)
-# ---------- END NEW CODE ----------
 
 selected_city = st.selectbox("Select Host City", sorted(cities))
 target = st.number_input("Target Score", min_value=0, max_value=500, value=160)
