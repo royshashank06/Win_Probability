@@ -112,6 +112,12 @@ st.markdown("<hr style='border:2px solid #FFD700;width:80%;margin:auto;'>", unsa
 # 6️⃣ INPUT SECTION
 # ----------------------------
 #st.markdown("<div class='card'>", unsafe_allow_html=True)
+col1, col2 = st.columns(2)
+with col1:
+    batting_team = st.selectbox("Select Batting Team", sorted(teams))
+with col2:
+    bowling_team = st.selectbox("Select Bowling Team", sorted(teams))
+    
 st.markdown(f"""
 <div class='card' style='text-align:center; font-size:22px; font-weight:700;'>
     <span style='color:{TEAM_COLORS[batting_team]}'>{batting_team}</span>
@@ -119,12 +125,6 @@ st.markdown(f"""
     <span style='color:{TEAM_COLORS[bowling_team]}'>{bowling_team}</span>
 </div>
 """, unsafe_allow_html=True)
-
-col1, col2 = st.columns(2)
-with col1:
-    batting_team = st.selectbox("Select Batting Team", sorted(teams))
-with col2:
-    bowling_team = st.selectbox("Select Bowling Team", sorted(teams))
 
 
 selected_city = st.selectbox("Select Host City", sorted(cities))
