@@ -1,7 +1,7 @@
 # --- Core Dependencies ---
 streamlit
 pandas
-scikit-learn
+scikit-learn==1.9.0
 # --- Optional ML Libraries ---
 xgboost
 # --- Utility / Environment ---
