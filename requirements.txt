@@ -1,10 +1,1 @@
-# --- Core Dependencies ---
-streamlit==1.38.0
-pandas==2.2.2
-scikit-learn==1.5.1
 
-# --- Optional ML Libraries ---
-xgboost==2.1.1
-
-# --- Utility / Environment ---
-numpy==1.26.4
